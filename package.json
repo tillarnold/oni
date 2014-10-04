@@ -1,0 +1,28 @@
+{
+  "name": "oni",
+  "version": "0.0.0",
+  "description": "Onions have layers. Ogres have layers. Canvases have layers.",
+  "main": "index.js",
+  "scripts": {
+    "jshint": "jshint test/* lib/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tillarnold/oni"
+  },
+  "keywords": [
+    "canvas",
+    "layer"
+  ],
+  "author": "Till Arnold",
+  "license": "MIT",
+  "devDependencies": {
+    "canvas-utils": "^0.2.0",
+    "insert-css": "^0.2.0",
+    "jshint": "^2.5.3"
+  },
+  "dependencies": {
+    "inherits": "^2.0.1",
+    "screenfull": "^1.2.1"
+  }
+}
