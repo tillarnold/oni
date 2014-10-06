@@ -1,4 +1,5 @@
 # oni
+[![NPM version](https://badge.fury.io/js/oni.svg)](http://badge.fury.io/js/oni)
 [![Code Climate](https://codeclimate.com/github/tillarnold/oni/badges/gpa.svg)](https://codeclimate.com/github/tillarnold/oni)
 [![Build Status](https://travis-ci.org/tillarnold/oni.svg?branch=master)](https://travis-ci.org/tillarnold/oni)
 [![devDependency Status](https://david-dm.org/tillarnold/oni/dev-status.svg)](https://david-dm.org/tillarnold/oni#info=devDependencies)
