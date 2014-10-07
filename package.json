@@ -17,7 +17,7 @@
   "author": "Till Arnold",
   "license": "MIT",
   "devDependencies": {
-    "canvas-utils": "^0.2.0",
+    "canvas-utils": "^0.3.2",
     "insert-css": "^0.2.0",
     "jshint": "^2.5.3"
   },
