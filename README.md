@@ -8,5 +8,5 @@
 Onions have layers. Ogres have layers. Canvases have layers.
 
 ## Release History
-* 2014-11-04   v0.0.1   Initial version.
+* 2014-10-04   v0.0.1   Initial version.
 
