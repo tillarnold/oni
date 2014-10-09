@@ -1,3 +1,5 @@
+'use strict';
+
 var LayerManager = require('../index.js').LayerManager;
 var ExpanderLayer = require('../index.js').ExpanderLayer;
 var canvasUtils = require('canvas-utils');
