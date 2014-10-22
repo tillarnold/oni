@@ -4,7 +4,8 @@
   "description": "Onions have layers. Ogres have layers. Canvases have layers.",
   "main": "index.js",
   "scripts": {
-    "jshint": "jshint test/* lib/*"
+    "jshint": "jshint test/* lib/*",
+     "serve":"beefy test/test.js  --live -v"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,11 @@
   "author": "Till Arnold",
   "license": "MIT",
   "devDependencies": {
+    "beefy": "^2.1.1",
     "canvas-utils": "^0.3.2",
     "insert-css": "^0.2.0",
-    "jshint": "^2.5.3"
+    "jshint": "^2.5.3",
+    "watchify": "^2.0.0"
   },
   "dependencies": {
     "inherits": "^2.0.1",
