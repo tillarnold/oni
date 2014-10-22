@@ -18,8 +18,9 @@
   "author": "Till Arnold",
   "license": "MIT",
   "devDependencies": {
+<<<<<<< HEAD
     "beefy": "^2.1.1",
-    "canvas-utils": "^0.3.2",
+    "canvas-utils": "^0.4.0",
     "insert-css": "^0.2.0",
     "jshint": "^2.5.3",
     "watchify": "^2.0.0"
