@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "jshint": "jshint test/* lib/*",
-     "serve":"beefy test/test.js  --live -v"
+    "serve": "beefy test/test.js  --live -v"
   },
   "repository": {
     "type": "git",
