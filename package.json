@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "inherits": "^2.0.1",
-    "screenfull": "^1.2.1"
+    "screenfull": "^2.0.0"
   }
 }
