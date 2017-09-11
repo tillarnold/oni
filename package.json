@@ -1,5 +1,5 @@
 {
-  "name": "oni",
+  "name": "@tillarnold/oni",
   "version": "0.0.1",
   "description": "Onions have layers. Ogres have layers. Canvases have layers.",
   "main": "index.js",
