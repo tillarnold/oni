@@ -12,7 +12,7 @@ var lm = new LayerManager(300, 400);
 var l1 = new ExpanderLayer();
 var l2 = new ExpanderLayer();
 
-var cee = new canvasUtils.CanvasEventEmitter(l1.getElement());
+var cee = new canvasUtils.createCanvasEventEmitter(l1.getElement());
 cee.on('mousemove', function(e) {
   l1.getContext().fillRect(e.x, e.y, 10, 10);
 });

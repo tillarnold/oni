@@ -2,10 +2,13 @@
   "name": "@tillarnold/oni",
   "version": "0.0.1",
   "description": "Onions have layers. Ogres have layers. Canvases have layers.",
-  "main": "index.js",
+  "main": "es5-generated/index.js",
+  "module": "es6-src/index.js",
   "scripts": {
     "jshint": "jshint test/* lib/*",
-    "beefy": "beefy test/test.js  --live -v"
+    "beefy": "beefy es5-generated/test/test.js -v --live --cwd es5-generated",
+    "lint": "eslint src-es6/*",
+    "build": "rm -rf es5-generated && mkdir es5-generated && babel src-es6 --out-dir es5-generated"
   },
   "repository": {
     "type": "git",
@@ -18,14 +21,16 @@
   "author": "Till Arnold",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "beefy": "^2.1.5",
-    "canvas-utils": "^0.6.0",
-    "insert-css": "^0.2.0",
+    "canvas-utils": "^0.7.0",
+    "eslint": "^4.17.0",
+    "insert-css": "^2.0.0",
     "jshint": "^2.9.1-rc1",
     "watchify": "^3.6.1"
   },
   "dependencies": {
-    "inherits": "^2.0.1",
     "screenfull": "^3.0.0"
   }
 }
