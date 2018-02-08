@@ -1,2 +1,5 @@
-module.exports.LayerManager = require('./lib/layerManager.js');
-module.exports.ExpanderLayer = require('./lib/expanderLayer.js');
+import LayerManager from './lib/layerManager'
+import ExpanderLayer from './lib/expanderLayer'
+
+
+export {LayerManager, ExpanderLayer}
