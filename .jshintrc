@@ -12,5 +12,6 @@
   "node": true,
   "forin": true,
   "noarg": true,
-  "esnext": true
+  "esnext": true,
+  "asi": true
 }

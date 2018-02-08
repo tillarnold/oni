@@ -179,9 +179,11 @@ export default class LayerManager {
     }
 
     document.addEventListener(screenfull.raw.fullscreenchange, () => {
-      screenfull.isFullscreen ? 
-        this._onEnterFullscreen():
+      if(screenfull.isFullscreen) {
+        this._onEnterFullscreen()}
+      else {
         this._onExitFullscreen()
+      }
     })
   }
 }

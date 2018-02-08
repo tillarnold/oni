@@ -5,9 +5,10 @@
   "main": "es5-generated/index.js",
   "module": "es6-src/index.js",
   "scripts": {
-    "jshint": "jshint test/* lib/*",
-    "beefy": "beefy es5-generated/test/test.js -v --live --cwd es5-generated",
+    "jshint": "jshint src-es6",
+    "beefy": "npm run build && beefy es5-generated/test/test.js -v --live --cwd es5-generated",
     "lint": "eslint src-es6/*",
+    "travis": "npm run jshint && npm run lint && npm run build",
     "build": "rm -rf es5-generated && mkdir es5-generated && babel src-es6 --out-dir es5-generated"
   },
   "repository": {
@@ -22,6 +23,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "beefy": "^2.1.5",
     "canvas-utils": "^0.7.0",
