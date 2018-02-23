@@ -1,6 +1,6 @@
 {
   "name": "oni.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Onions have layers. Ogres have layers. Canvases have layers.",
   "main": "es5-generated/index.js",
   "module": "src-es6/index.js",
