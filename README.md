@@ -8,5 +8,6 @@
 Onions have layers. Ogres have layers. Canvases have layers.
 
 ## Release History
+* 2018-02-23   v0.1.0   Is now written in ES6.
 * 2014-10-04   v0.0.1   Initial version.
 
