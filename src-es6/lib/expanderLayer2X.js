@@ -8,7 +8,7 @@ import Layer from './layer'
  * @augments Layer
  * @param {Element} element - the element to be wraped in the Layer. Defualts to a new canvas Element
  */
-class ExpanderLayer2X extends Layer {
+export default class ExpanderLayer2X extends Layer {
   _changeSizeTo(width, height) {
     this._element.width = width * 2
     this._element.height = height * 2
@@ -16,5 +16,3 @@ class ExpanderLayer2X extends Layer {
     this._element.style.height = height + 'px'
   }
 }
-
-module.exports = ExpanderLayer2X
