@@ -8,13 +8,13 @@ import Layer from './layer'
  * @augments Layer
  * @param {Element} element - the element to be wraped in the Layer. Defualts to a new canvas Element
  */
-class ExpanderLayer extends Layer {
+class ExpanderLayer2X extends Layer {
   _changeSizeTo(width, height) {
-    this._element.width = width
-    this._element.height = height
+    this._element.width = width * 2
+    this._element.height = height * 2
     this._element.style.width = width + 'px'
     this._element.style.height = height + 'px'
   }
 }
 
-module.exports = ExpanderLayer
+module.exports = ExpanderLayer2X

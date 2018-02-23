@@ -54,8 +54,8 @@ export default class LayerManager {
    */
   adjustToContainer() {
     let parent = window.getComputedStyle(this._domElement.parentNode),
-        width = parseInt(parent.width, 10),
-        height = parseInt(parent.height, 10)
+      width = parseInt(parent.width, 10),
+      height = parseInt(parent.height, 10)
 
     this.setSize(width, height)
   }
@@ -179,12 +179,11 @@ export default class LayerManager {
     }
 
     document.addEventListener(screenfull.raw.fullscreenchange, () => {
-      if(screenfull.isFullscreen) {
-        this._onEnterFullscreen()}
-      else {
+      if (screenfull.isFullscreen) {
+        this._onEnterFullscreen()
+      } else {
         this._onExitFullscreen()
       }
     })
   }
 }
-

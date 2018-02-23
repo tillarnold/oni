@@ -9,7 +9,9 @@
     "beefy": "npm run build && beefy es5-generated/test/test.js -v --live --cwd es5-generated",
     "lint": "eslint src-es6/*",
     "travis": "npm run jshint && npm run lint && npm run build",
-    "build": "rm -rf es5-generated && mkdir es5-generated && babel src-es6 --out-dir es5-generated"
+    "format": "js-beautify -s=2 -r -f src-es6/*.js src-es6/test/*.js src-es6/lib/*.js",
+    "build": "rm -rf es5-generated && mkdir es5-generated && babel src-es6 --out-dir es5-generated",
+    "check": "npm run format && npm run jshint && npm run lint && npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,9 +28,10 @@
     "babel-eslint": "^8.2.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "beefy": "^2.1.5",
-    "canvas-utils": "^0.7.0",
+    "canvas-utils": "^0.8.0",
     "eslint": "^4.17.0",
     "insert-css": "^2.0.0",
+    "js-beautify": "^1.7.5",
     "jshint": "^2.9.1-rc1",
     "watchify": "^3.6.1"
   },

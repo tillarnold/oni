@@ -12,7 +12,9 @@ let l2 = new ExpanderLayer()
 
 let cee = new canvasUtils.createCanvasEventEmitter(l1.getElement())
 cee.on('mousemove', function(e) {
-  l1.getContext().fillRect(e.x, e.y, 10, 10)
+  let ctx = l1.getContext()
+  ctx.fillStyle = 'purple'
+  ctx.fillRect(e.x, e.y, 10, 10)
 })
 
 lm.attachTo(document.body)
