@@ -48,11 +48,20 @@ export default class LayerManager {
   }
 
 
+  /**
+   * Returs the dom element containing all the layers
+   */
+  getWraperElement() {
+    return this._domElement
+  }
 
   /**
    * Adjust all Layers to the Size of the container of the LayerManager
    */
   adjustToContainer() {
+    if (this.isFullscreen()) {
+      return
+    }
     let parent = window.getComputedStyle(this._domElement.parentNode),
       width = parseInt(parent.width, 10),
       height = parseInt(parent.height, 10)

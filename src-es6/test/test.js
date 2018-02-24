@@ -6,7 +6,18 @@ import {
 let canvasUtils = require('canvas-utils')
 
 
-require('insert-css')('*{outline:#000 solid 1px}')
+require('insert-css')(`
+  *{
+    outline:#000 solid 1px;
+    margin: 0;
+    padding 0;
+  }
+  body, html {
+    overflow: hidden;
+    height: 100vh;
+    widht: 100vw;
+  }
+`)
 
 
 let lm = new LayerManager(300, 400)
@@ -39,7 +50,19 @@ function paint() {
 paint()
 
 
+function debounce(func, wait) {
+  let timeout
+  return function() {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => func.apply(arguments), wait)
+  }
+}
 
-document.body.addEventListener('click', function() {
+window.addEventListener('resize', debounce(() => {
+  console.log('resize', screen)
+  lm.adjustToContainer()
+}, 300))
+
+document.body.addEventListener('dblclick', function() {
   lm.doFullscreen()
 })
