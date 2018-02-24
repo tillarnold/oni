@@ -37,4 +37,21 @@ export default class Layer {
   getElement() {
     return this._element
   }
+
+
+  hide() {
+    this._element.style.visibility = 'hidden'
+  }
+
+  show() {
+    this._element.style.visibility = 'visible'
+  }
+
+  toggleVisibility() {
+    if (this._element.style.visibility === 'hidden') {
+      this.show()
+    } else {
+      this.hide()
+    }
+  }
 }

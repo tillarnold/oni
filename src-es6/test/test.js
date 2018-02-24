@@ -29,6 +29,13 @@ let l3 = new CenteredLayer(100, 100)
 let l4 = new KeepRatioResizeLayer(1920, 1080)
 let l5 = new KeepRatioDisplayLayer(400, 200)
 
+
+document.addEventListener('keydown', e => {
+  if (e.keyCode === 84) { // the letter t
+    l5.toggleVisibility()
+  }
+})
+
 let cee = canvasUtils.createCanvasEventEmitter(l1.getElement())
 cee.on('mousemove', function(e) {
   let ctx = l1.getContext()
@@ -74,7 +81,6 @@ function debounce(func, wait) {
 }
 
 window.addEventListener('resize', debounce(() => {
-  console.log('resize', screen)
   lm.adjustToContainer()
 }, 100))
 
