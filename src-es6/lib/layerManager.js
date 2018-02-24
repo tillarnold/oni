@@ -82,8 +82,8 @@ export default class LayerManager {
    */
   add(layer, position) {
     this._layers.push(layer)
-    layer._changeSizeTo(this._width, this._height)
     let wraper = wrapElement(layer.getElement(), position)
+    layer._changeSizeTo(this._width, this._height)
     this._domElement.appendChild(wraper)
   }
 
