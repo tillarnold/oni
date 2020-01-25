@@ -1,5 +1,3 @@
-import screenfull from 'screenfull'
-
 /**
  * Help function to wrap an Layer element in
  * a wrapper formated in the right way.
@@ -114,7 +112,7 @@ export default class LayerManager {
       //Throw error maybe?
       return
     }
-    screenfull.request(this._domElement)
+    this._domElement.requestFullscreen()
   }
 
   /**
@@ -125,7 +123,7 @@ export default class LayerManager {
       //Throw error maybe?
       return
     }
-    screenfull.exit()
+    document.exitFullscreen()
   }
 
   /**
@@ -134,7 +132,7 @@ export default class LayerManager {
    * @returns {Boolean}
    */
   isFullscreen() {
-    return screenfull.isFullscreen && screenfull.element === this._domElement
+    return document.fullscreenElement === this._domElement
   }
 
   /**
@@ -143,7 +141,7 @@ export default class LayerManager {
    * @returns {Boolean}
    */
   canDoFullscreen() {
-    return screenfull.enabled
+    return document.fullscreenEnabled
   }
 
   /**
@@ -183,12 +181,12 @@ export default class LayerManager {
    * Attaches the eventListeners for fullscreen to the document.
    */
   _attachEventListener() {
-    if (!screenfull.enabled) {
+    if (!this.canDoFullscreen()) {
       return
     }
 
-    document.addEventListener(screenfull.raw.fullscreenchange, () => {
-      if (screenfull.isFullscreen) {
+    document.addEventListener('fullscreenchange', () => {
+      if (this.isFullscreen()) {
         this._onEnterFullscreen()
       } else {
         this._onExitFullscreen()
