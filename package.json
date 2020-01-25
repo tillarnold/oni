@@ -25,15 +25,15 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.2.2",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "beefy": "^2.1.5",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "beefy": "^2.1.8",
     "canvas-utils": "^0.8.0",
-    "eslint": "^4.18.1",
+    "eslint": "^6.8.0",
     "insert-css": "^2.0.0",
-    "js-beautify": "^1.7.5",
-    "jshint": "^2.9.1-rc1",
-    "watchify": "^3.6.1"
+    "js-beautify": "^1.10.3",
+    "jshint": "^2.11.0",
+    "watchify": "^3.11.1"
   },
   "dependencies": {}
 }
